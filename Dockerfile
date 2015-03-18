@@ -24,5 +24,5 @@ ADD . /opt/mangos/src
 
 # Build & install
 RUN mkdir /opt/mangos/build && cd /opt/mangos/build \
-    && cmake -DCMAKE_INSTALL_PREFIX=/opt/mangos -DCMAKE_BUILD_TYPE=Release ../src \
+    && cmake -DCMAKE_INSTALL_PREFIX=/opt/mangos -DCMAKE_BUILD_TYPE=Release -DBUILD_TOOLS=OFF ../src \
     && make && make install
